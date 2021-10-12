@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "AniDbService";
+
+package anidb;
+
+
+service AnimeDbService {
+  rpc GetUpComingAnime (Empty) returns (stream Anime);
+}
+message Anime {
+  int32 anime_id = 1;
+  google.protobuf.Timestamp date_time = 2;
+  int32 date_type = 3;
+  string name = 4;
+  string img_url = 5;
+}
+
+message Empty {
+  
+}
+
