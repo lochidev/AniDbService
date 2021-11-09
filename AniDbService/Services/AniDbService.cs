@@ -157,6 +157,7 @@ public class AniDbService : AnimeDbService.AnimeDbServiceBase
                     _logger.LogError($"Error when getting anime info: {e.Message}");
                 }
         }
+
         // await Parallel.ForEachAsync(calendarItems, async (calenderItem, token) =>
         // {
         //     var apiEndPoint =
